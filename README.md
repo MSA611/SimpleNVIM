@@ -1,7 +1,8 @@
 ### Installation
 
-```git clone https://github.com/MSA611/SimpleNVIM.git ~/.config/nvim && nvim
+```
 
+git clone https://github.com/MSA611/SimpleNVIM.git ~/.config/nvim && nvim
 ```
 
 ### Uninstallation
