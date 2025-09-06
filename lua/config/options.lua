@@ -1,3 +1,5 @@
+vim.opt.shortmess:append("I")
+
 vim.loader.enable() --impatient.nvim
 vim.opt.hlsearch = true -- do not highlight all matches on previous search pattern
 vim.opt.incsearch = true -- incrementally highlight searches as you type
