@@ -66,6 +66,9 @@ vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Go to Left Window", remap 
 vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Go to Lower Window", remap = true })
 vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Go to Upper Window", remap = true })
 vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Go to Right Window", remap = true })
+vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "Switch to Next Window" })
+vim.keymap.set("n", "<leader>wL", "<C-w>L", { desc = "Move to Far Right Window" })
+vim.keymap.set("n", "<leader>wH", "<C-w>H", { desc = "Move to Far Left Window" })
 
 -- Resize window using <ctrl> arrow keys
 vim.keymap.set("n", "<leader>we", "<C-w>=", { desc = "Equalize Window Sizes" })
