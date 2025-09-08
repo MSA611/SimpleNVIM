@@ -69,6 +69,10 @@ vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Go to Right Window", remap
 vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "Switch to Next Window" })
 vim.keymap.set("n", "<leader>wL", "<C-w>L", { desc = "Move to Far Right Window" })
 vim.keymap.set("n", "<leader>wH", "<C-w>H", { desc = "Move to Far Left Window" })
+vim.keymap.set("n", "<leader>ws", "<C-W>s", { desc = "Split Window Below", remap = true })
+vim.keymap.set("n", "<leader>wv", "<C-W>v", { desc = "Split Window Right", remap = true })
+vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
+vim.keymap.set("n", "<leader>wx", "<C-w>x", { desc = "Swap Current Window with Next" })
 
 -- Resize window using <ctrl> arrow keys
 vim.keymap.set("n", "<leader>we", "<C-w>=", { desc = "Equalize Window Sizes" })
@@ -96,8 +100,3 @@ vim.keymap.set("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffe
 vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>bD", "<cmd>bd<cr>", { desc = "Delete Buffer and Window" })
 vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#|bd#<cr>", { desc = "Delete Other Buffers" })
-
--- windows
-vim.keymap.set("n", "<leader>ws", "<C-W>s", { desc = "Split Window Below", remap = true })
-vim.keymap.set("n", "<leader>wv", "<C-W>v", { desc = "Split Window Right", remap = true })
-vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
