@@ -75,7 +75,8 @@ return {
 			{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help Tags" },
 			{ "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
 			{ "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "Workspace Diagnostics" },
-			-- Add more keymaps as desired
+			{ "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "Git Status" },
+			{ "<leader>gl", "<cmd>Telescope git_commits<cr>", desc = "Git Commits (Log)" },
 		},
 	},
 }
