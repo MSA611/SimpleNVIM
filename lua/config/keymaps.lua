@@ -69,6 +69,7 @@ vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Go to Right Window", remap
 vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "Switch to Next Window" })
 vim.keymap.set("n", "<leader>wL", "<C-w>L", { desc = "Move to Far Right Window" })
 vim.keymap.set("n", "<leader>wH", "<C-w>H", { desc = "Move to Far Left Window" })
+vim.keymap.set("n", "<leader>wK", "<C-w>K", { desc = "Move window to top " })
 vim.keymap.set("n", "<leader>ws", "<C-W>s", { desc = "Split Window Below", remap = true })
 vim.keymap.set("n", "<leader>wv", "<C-W>v", { desc = "Split Window Right", remap = true })
 vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
