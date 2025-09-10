@@ -2,6 +2,7 @@ require("config.options")
 require("config.keymaps")
 require("config.lazy")
 vim.uv = vim.uv or vim.loop
+vim.g.startuptime = vim.loop.hrtime()
 
 local M = {}
 

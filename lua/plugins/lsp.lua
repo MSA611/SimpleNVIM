@@ -5,9 +5,9 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"neovim/nvim-lspconfig",
 		},
-		vim.diagnostic.config({
-			virtual_text = true,
-		}),
+		-- vim.diagnostic.config({
+		-- 	virtual_text = true,
+		-- }),
 		opts = {
 			servers = {
 				lua_ls = {
