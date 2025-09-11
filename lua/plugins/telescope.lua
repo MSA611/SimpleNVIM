@@ -31,6 +31,17 @@ return {
 		config = function()
 			require("telescope").setup({
 				defaults = {
+					--changing the working layout of telescope perplexity generated
+
+					layout_strategy = "horizontal",
+					layout_config = {
+						horizontal = {
+							prompt_position = "top",
+						},
+					},
+
+					sorting_strategy = "ascending",
+					--ends here
 					prompt_prefix = " ",
 					selection_caret = " ",
 					mappings = {
@@ -64,19 +75,19 @@ return {
 			})
 		end,
 		keys = {
-			{ "<leader><space>", "<cmd>Telescope find_files<cr>", desc = "Find Files (Root Dir)" },
-			{ "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Text Grep (Root Dir)" },
-			{ "<leader>,", "<cmd>Telescope buffers<cr>", desc = "Switch Buffer" },
-			{ "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
-			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-			{ "<leader>fg", "<cmd>Telescope git_files<cr>", desc = "Find Git Files" },
-			{ "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent Files" },
-			{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-			{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help Tags" },
-			{ "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
-			{ "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "Workspace Diagnostics" },
-			{ "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "Git Status" },
-			{ "<leader>gl", "<cmd>Telescope git_commits<cr>", desc = "Git Commits (Log)" },
+			{ "<leader><space>", "<cmd>Telescope find_files<cr>",      desc = "Find Files (Root Dir)" },
+			{ "<leader>/",       "<cmd>Telescope live_grep<cr>",       desc = "Text Grep (Root Dir)" },
+			{ "<leader>,",       "<cmd>Telescope buffers<cr>",         desc = "Switch Buffer" },
+			{ "<leader>:",       "<cmd>Telescope command_history<cr>", desc = "Command History" },
+			{ "<leader>ff",      "<cmd>Telescope find_files<cr>",      desc = "Find Files" },
+			{ "<leader>gf",      "<cmd>Telescope git_files<cr>",       desc = "Find Git Files" },
+			{ "<leader>fr",      "<cmd>Telescope oldfiles<cr>",        desc = "Recent Files" },
+			{ "<leader>fb",      "<cmd>Telescope buffers<cr>",         desc = "Buffers" },
+			{ "<leader>fh",      "<cmd>Telescope help_tags<cr>",       desc = "Help Tags" },
+			{ "<leader>fk",      "<cmd>Telescope keymaps<cr>",         desc = "Key Maps" },
+			{ "<leader>fd",      "<cmd>Telescope diagnostics<cr>",     desc = "Workspace Diagnostics" },
+			{ "<leader>gs",      "<cmd>Telescope git_status<cr>",      desc = "Git Status" },
+			{ "<leader>gl",      "<cmd>Telescope git_commits<cr>",     desc = "Git Commits (Log)" },
 		},
 	},
 }
