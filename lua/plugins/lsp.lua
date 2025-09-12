@@ -19,7 +19,6 @@ return {
 						},
 					},
 				},
-				-- ts_ls = {},
 				tsserver = {},
 				vtsls = {},
 				eslint = {},
