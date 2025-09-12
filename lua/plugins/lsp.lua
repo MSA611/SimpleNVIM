@@ -20,6 +20,7 @@ return {
 					},
 				},
 				ts_ls = {},
+				vtsls = {},
 				eslint = {},
 				tailwindcss = {},
 				emmet_language_server = {},
