@@ -2,6 +2,10 @@ return {
 	{
 		"catgoose/nvim-colorizer.lua",
 		event = "BufReadPre",
-		opts = {},
+		opts = {
+			tailwind = true,
+			css = true,
+			mode = "background",
+		},
 	},
 }

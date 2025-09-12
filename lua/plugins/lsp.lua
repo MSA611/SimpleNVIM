@@ -20,10 +20,33 @@ return {
 					},
 				},
 				-- ts_ls = {},
-				tsserver = {},
+				-- tsserver = {},
 				vtsls = {},
 				eslint = {},
-				tailwindcss = {},
+				tailwindcss = {
+					filetypes = {
+						"html",
+						"css",
+						"javascript",
+						"javascriptreact",
+						"typescript",
+						"typescriptreact",
+						"svelte",
+						"vue",
+					},
+
+					settings = {
+						tailwindCSS = {
+							includeLanguages = {
+								html = "html",
+								javascript = "javascript",
+								javascriptreact = "javascriptreact",
+								typescript = "typescript",
+								typescriptreact = "typescriptreact",
+							},
+						},
+					},
+				},
 				emmet_language_server = {},
 				jdtls = {},
 				html = {},

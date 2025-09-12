@@ -12,7 +12,10 @@ return {
 			nerd_font_variant = "mono",
 		},
 
-		completion = { documentation = { auto_show = true } },
+		completion = {
+			documentation = { auto_show = true },
+			lsp = { async = true }, -- This tells the completion to not wait and freeze
+		},
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 		},
