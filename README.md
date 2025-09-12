@@ -18,6 +18,6 @@ rm -rf ~/.var/app/io.neovim.nvim/.local/state/nvim
 
 ```
 
-### If You Require Which Key Then Un Comment whichKey.lua from lua/plugins/whichKey.lua
+#### If You Require Which Key Then Un Comment whichKey.lua from lua/plugins/whichKey.lua
 
-### If You Like Beautiful Indentation then you can Uncomment the lines present in lua/plugins/indent-blankline.nvim.lua
+#### If You Like Beautiful Indentation then you can Uncomment the lines present in lua/plugins/indent-blankline.nvim.lua
