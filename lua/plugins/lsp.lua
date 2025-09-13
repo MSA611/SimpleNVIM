@@ -5,9 +5,21 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"neovim/nvim-lspconfig",
 		},
+
 		vim.diagnostic.config({
-			virtual_text = true,
+			virtual_text = {
+				spacing = 2,
+				prefix = "●",
+				severity_sort = true,
+			},
+			update_in_insert = false, -- CRITICAL: Don't update in insert mode
+			severity_sort = true,
+			float = {
+				border = "rounded",
+				source = "always",
+			},
 		}),
+
 		opts = {
 			servers = {
 				lua_ls = {
@@ -20,7 +32,7 @@ return {
 					},
 				},
 				tsserver = {},
-				vtsls = {},
+				-- vtsls = {},
 				eslint = {},
 				tailwindcss = {},
 				emmet_language_server = {},
@@ -29,6 +41,10 @@ return {
 				cssls = {},
 				marksman = {},
 			},
+		},
+
+		flags = {
+			debounce_text_changes = 150, -- Add debouncing for performance
 		},
 		config = function(_, opts)
 			require("mason").setup()
