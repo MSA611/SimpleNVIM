@@ -50,7 +50,6 @@ return {
 
 		fuzzy = {
 			implementation = "prefer_rust_with_warning",
-			max_items = 50,
 			sorts = { "score", "sort_text" },
 		},
 	},
