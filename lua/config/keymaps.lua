@@ -52,8 +52,8 @@ vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 vim.keymap.set({ "n", "v" }, "y", [["+y]]) --For Copying it into the terminal
 --for floating terminal
 
-vim.keymap.set("n", "<C-_>", "<Cmd>ToggleTerm dir=%:p:h direction=float<CR>") -- normal mode Ctrl+/
-vim.keymap.set("t", "<C-_>", "<Cmd>ToggleTerm direction=float<CR>") -- terminal mode Ctrl+/
+vim.keymap.set("n", "<c-_>", "<Cmd>ToggleTerm dir=./ direction=float<CR>") -- floating terminal ctrl+/
+vim.keymap.set("t", "<c-_>", "<Cmd>ToggleTerm dir=./ direction=float<CR>") -- floating terminal ctrl+/
 
 -- better up/down
 vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
