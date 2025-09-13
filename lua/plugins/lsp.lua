@@ -4,47 +4,42 @@ return {
 		dependencies = {
 			"williamboman/mason-lspconfig.nvim",
 			"neovim/nvim-lspconfig",
+			"artemave/workspace-diagnostics.nvim",
 		},
-
-		vim.diagnostic.config({
-			virtual_text = {
-				spacing = 2,
-				prefix = "●",
-				severity_sort = true,
-			},
-			update_in_insert = false, -- CRITICAL: Don't update in insert mode
-			severity_sort = true,
-			float = {
-				border = "rounded",
-				source = "always",
-			},
-		}),
-
 		opts = {
 			servers = {
 				lua_ls = {
 					settings = {
 						Lua = {
+							version = "LuaJIT",
 							diagnostics = {
-								globals = { "vim" },
+								globals = {
+									"vim",
+									"require",
+								},
+							},
+							workspace = {
+								library = vim.api.nvim_get_runtime_file("", true),
+							},
+							telemetry = {
+								enable = false,
 							},
 						},
 					},
 				},
-				tsserver = {},
-				-- vtsls = {},
+				vim.diagnostic.config({
+					virtual_text = true,
+				}),
+				ts_ls = {
+					on_attach = function(client, bufnr)
+						require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+					end,
+				},
 				eslint = {},
 				tailwindcss = {},
-				emmet_language_server = {},
-				jdtls = {},
 				html = {},
 				cssls = {},
-				marksman = {},
 			},
-		},
-
-		flags = {
-			debounce_text_changes = 150, -- Add debouncing for performance
 		},
 		config = function(_, opts)
 			require("mason").setup()
@@ -52,9 +47,11 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = { "lua_ls", "eslint", "ts_ls" },
 			})
+			local lspconfig = require("lspconfig")
 
 			for server, config in pairs(opts.servers) do
-				vim.lsp.config(server, config)
+				-- vim.lsp.config(server, config)
+				lspconfig[server].setup(config)
 				vim.lsp.enable(server)
 			end
 		end,
