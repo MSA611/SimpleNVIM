@@ -28,9 +28,9 @@ return {
 						},
 					},
 				},
-				vim.diagnostic.config({
-					virtual_text = true,
-				}),
+				-- vim.diagnostic.config({
+				-- 	virtual_text = true,
+				-- }),
 				ts_ls = {
 					on_attach = function(client, bufnr)
 						require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
