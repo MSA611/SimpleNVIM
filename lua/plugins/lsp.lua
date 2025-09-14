@@ -41,6 +41,7 @@ return {
 				cssls = {},
 				jdtls = {},
 				emmet_language_server = {},
+				yamlls = {},
 			},
 		},
 		config = function(_, opts)
