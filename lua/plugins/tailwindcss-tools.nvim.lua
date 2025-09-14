@@ -1,6 +1,7 @@
 return {
 	{
 		"luckasRanarison/tailwind-tools.nvim",
+		event = "VeryLazy",
 		dependencies = { "neovim/nvim-lspconfig" },
 		opts = {
 			document_color = {
