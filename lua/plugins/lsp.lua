@@ -28,9 +28,6 @@ return {
 						},
 					},
 				},
-				-- vim.diagnostic.config({
-				-- 	virtual_text = true,
-				-- }),
 				ts_ls = {
 					on_attach = function(client, bufnr)
 						require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
@@ -50,6 +47,9 @@ return {
 
 			require("mason-lspconfig").setup({
 				ensure_installed = { "lua_ls", "eslint", "ts_ls" },
+			})
+			vim.diagnostic.config({
+				virtual_text = true,
 			})
 			local lspconfig = require("lspconfig")
 
