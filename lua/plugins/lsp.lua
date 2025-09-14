@@ -39,6 +39,7 @@ return {
 				tailwindcss = {},
 				html = {},
 				cssls = {},
+				jdtls = {},
 			},
 		},
 		config = function(_, opts)
