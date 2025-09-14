@@ -40,6 +40,7 @@ return {
 				html = {},
 				cssls = {},
 				jdtls = {},
+				emmet_language_server = {},
 			},
 		},
 		config = function(_, opts)
