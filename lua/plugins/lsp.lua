@@ -48,9 +48,9 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = { "lua_ls", "eslint", "ts_ls" },
 			})
-			-- vim.diagnostic.config({
-			-- 	virtual_text = true,
-			-- })
+			vim.diagnostic.config({
+				virtual_text = true,
+			})
 			local lspconfig = require("lspconfig")
 
 			for server, config in pairs(opts.servers) do
