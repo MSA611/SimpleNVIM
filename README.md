@@ -186,3 +186,30 @@ rm -rf ~/.var/app/io.neovim.nvim/.local/state/nvim
 | `gsr`      | Replace Surrounding    |
 | `gsn`      | Update `n_lines`       |
 
+### 📖 CopilotChat.nvim Keybindings
+
+| Keybinding   | Mode(s)        | Action                                   | Description                  |
+| ------------ | -------------- | ---------------------------------------- | ---------------------------- |
+| `<C-s>`      | `copilot-chat` | `<CR>` (remap)                           | Submit Prompt                |
+| `<leader>a`  | `n`, `v`       | —                                        | **AI menu prefix** (+ai)     |
+| `<leader>aa` | `n`, `v`       | `require("CopilotChat").toggle()`        | Toggle (CopilotChat)         |
+| `<leader>ax` | `n`, `v`       | `require("CopilotChat").reset()`         | Clear (CopilotChat)          |
+| `<leader>aq` | `n`, `v`       | `vim.ui.input(...) → ask`                | Quick Chat (CopilotChat)     |
+| `<leader>ap` | `n`, `v`       | `require("CopilotChat").select_prompt()` | Prompt Actions (CopilotChat) |
+
+---
+
+### 🚀 Getting Started with CopilotChat
+
+1. Run the command:
+
+   ```vim
+   :Copilot setup
+   ```
+
+   ```vim
+   :Copilot auth
+   ```
+
+   - After Running the Command Copilot auth it open a menu in your Neovim Just Press Enter and then it will Open the Browser
+   - In The Browser Just Type The Verification Code Provided By Your Neovim and Authenticate Now You are Ready to use Copilot
