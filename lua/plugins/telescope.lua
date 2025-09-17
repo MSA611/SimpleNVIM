@@ -15,6 +15,10 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8", -- or use branch = '0.1.x' for the latest release branch
+		event = "VeryLazy",
+		cmd = {
+			"Telescope",
+		},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{

@@ -1,44 +1,44 @@
 return {
-	-- indent-blankline.nvim for static indent guides
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		opts = {
-			indent = {
-				char = "▏", -- character for indent guide line
-				-- You can customize more options here
-			},
-			scope = { enabled = false }, -- disable scope to avoid conflict with mini.indentscope
-		},
-	},
-
-	-- mini.indentscope for active indent scope with animation
-	{
-		"echasnovski/mini.indentscope",
-		version = false,
-		event = "BufReadPre",
-		opts = {
-			symbol = "│", -- character for active scope guide
-			options = { try_as_border = true },
-		},
-		init = function()
-			-- Disable mini.indentscope for certain filetypes/buffers where unwanted
-			vim.api.nvim_create_autocmd("FileType", {
-				pattern = {
-					"help",
-					"terminal",
-					"neo-tree",
-					"Trouble",
-					"lazy",
-					"mason",
-					"notify",
-					"toggleterm",
-					"alpha",
-				},
-				callback = function()
-					vim.b.miniindentscope_disable = true
-				end,
-			})
-		end,
-	},
+	-- -- indent-blankline.nvim for static indent guides
+	-- {
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	main = "ibl",
+	-- 	opts = {
+	-- 		indent = {
+	-- 			char = "▏", -- character for indent guide line
+	-- 			-- You can customize more options here
+	-- 		},
+	-- 		scope = { enabled = false }, -- disable scope to avoid conflict with mini.indentscope
+	-- 	},
+	-- },
+	--
+	-- -- mini.indentscope for active indent scope with animation
+	-- {
+	-- 	"echasnovski/mini.indentscope",
+	-- 	version = false,
+	-- 	event = "BufReadPre",
+	-- 	opts = {
+	-- 		symbol = "│", -- character for active scope guide
+	-- 		options = { try_as_border = true },
+	-- 	},
+	-- 	init = function()
+	-- 		-- Disable mini.indentscope for certain filetypes/buffers where unwanted
+	-- 		vim.api.nvim_create_autocmd("FileType", {
+	-- 			pattern = {
+	-- 				"help",
+	-- 				"terminal",
+	-- 				"neo-tree",
+	-- 				"Trouble",
+	-- 				"lazy",
+	-- 				"mason",
+	-- 				"notify",
+	-- 				"toggleterm",
+	-- 				"alpha",
+	-- 			},
+	-- 			callback = function()
+	-- 				vim.b.miniindentscope_disable = true
+	-- 			end,
+	-- 		})
+	-- 	end,
+	-- },
 }
