@@ -5,6 +5,7 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 
+opt.cmdheight = 0 -- makes the status bar of the neovim at the bottom
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
@@ -37,7 +38,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
-
 
 -- Create an augroup to avoid duplicate autocommands
 local yank_group = vim.api.nvim_create_augroup("HighlightYank", { clear = true })
