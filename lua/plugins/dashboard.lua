@@ -22,6 +22,10 @@ return {
 			dashboard.section.header.val = vim.split(logo, "\n")
       -- stylua: ignore
       dashboard.section.buttons.val = {
+        dashboard.button("<leader>space", " " .. " Find file"),
+        dashboard.button("<leader>fr", " " .. " Recent files"),
+        dashboard.button("<leader>/", " " .. " Find text" ),
+        dashboard.button("<leader>fc", " " .. " Config"   ),
         dashboard.button("s", " " .. " Restore Session", [[<cmd> lua require("persistence").load() <cr>]]),
         dashboard.button("l", "󰒲 " .. " Lazy",            "<cmd> Lazy <cr>"),
         dashboard.button("q", " " .. " Quit",            "<cmd> qa <cr>"),
